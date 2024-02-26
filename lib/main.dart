@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:trace_app_3d/screens/register_client.dart';
 import 'firebase_options.dart';
 import 'package:trace_app_3d/screens/login.dart';
 
@@ -13,7 +14,7 @@ void main() async {
 }
 
 //TRACING APP
-//1) Register both a) client and b) establishment - Firebase Auth
+//!1) Register both a) client and b) establishment - Firebase Auth
 //!2) Login a) client and b) establishment - Auth
 //3) QR Code generation - qr package
 //4) Scan QR Code - qr package
@@ -26,7 +27,7 @@ class TraceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: RegisterClientScreen(),
       builder: EasyLoading.init(),
     );
   }
