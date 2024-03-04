@@ -172,10 +172,11 @@ class _RegisterClientScreenState extends State<RegisterClientScreen> {
               email: email.text, password: password.text);
       //firestore add document
       String user_id = userCredential.user!.uid;
-      await FirebaseFirestore.instance.collection('clients').doc(user_id).set({
+      await FirebaseFirestore.instance.collection('users').doc(user_id).set({
         'firstname': firstName.text,
         'lastname': lastName.text,
         'email': email.text,
+        'type': 'client',
       });
       // .add({
       //   'firstname': firstName.text,
